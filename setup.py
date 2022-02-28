@@ -16,9 +16,9 @@ with open(os.path.join("CHANGES.rst")) as f:
 
 setup(
     name="odoo-elasticapm",
+    version="0.0.2",
     description="Elastic APM integration for Odoo",
     long_description="\n".join(long_description),
-    use_scm_version=True,
     packages=["odoo_elasticapm"],
     include_package_data=True,
     setup_requires=["setuptools_scm"],

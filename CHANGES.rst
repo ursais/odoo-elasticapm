@@ -1,13 +1,13 @@
 Changes
 ~~~~~~~
 
-.. Future (?)
-.. ----------
-.. - ...
+0.0.2
+-----
 
+- Add support for Odoo 14
 
 0.0.1
---------
+-----
 
 - add transaction capture for http request
 - add transaction capture for cron
