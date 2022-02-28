@@ -62,13 +62,11 @@ def skip_tracing():
 
 
 def before_dispatch():
-    print("\n\n\n Called in before_dispatch \n\n\n")
     elastic_apm_client.begin_transaction("request")
     elasticapm.set_user_context(user_id=request.session.uid)
 
 
 def after_dispatch(response):
-    print("\n\n\n Called in after_dispatch \n\n\n")
     path_info = request.httprequest.environ.get("PATH_INFO")
     name = path_info
     for key in ["model", "method", "signal"]:
@@ -112,4 +110,3 @@ else:
 
 
 IrHttp._dispatch = _dispatch
-
